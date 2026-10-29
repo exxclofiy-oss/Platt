@@ -1,0 +1,25 @@
+name: Platt
+version: 0.1.0-alpha
+main: dev.platt.PlattPlugin
+api-version: '1.21.11'
+author: Custom SMP
+website: https://papermc.io/
+description: 13 combat-charged armor-trim powers with trust and custom assets.
+commands:
+  platt:
+    description: Select trim material, use an ability, view state, or reload config
+    usage: /platt <status|select|use|template|reload>
+    aliases: [awakening,aw,trim]
+  trust:
+    description: Trusted players are exempt from friendly-fire and your damaging abilities.
+    usage: /trust <add|remove|list> [player]
+  cooldown:
+    description: Reset trim cooldowns for testing or moderation.
+    usage: /cooldown reset [player] [material|all]
+permissions:
+  platt.admin:
+    description: Give templates, reset other players, reload configuration
+    default: op
+  platt.use:
+    description: Use Platt trims
+    default: true

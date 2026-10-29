@@ -1,0 +1,107 @@
+# PLATT — Paper 1.21.11, draft 0.1.0-alpha
+# All 13 powers use the SAME craftable Platt Template in a smithing table.
+# Install datapack (world/datapacks) BEFORE starting server, then resource pack on clients.
+# Every helmet, chestplate, leggings and boots can carry the custom trim.
+# If wearing multiple different Platt materials, choose one with /platt select <material>.
+# Each material has ONE shared charge. A charge stays READY indefinitely until used.
+# A power cast consumes the charge and starts that ability's cooldown.
+# Breeze and Echo have TWO choices: one charge casts EITHER ability, not both.
+# Charge can be earned DURING a cooldown, but cannot be cast until the timer expires.
+# /cooldown reset <player> <material|all> clears timers (optionally grants a test charge).
+# Values are in SECONDS unless named otherwise; /platt reload rereads this file.
+
+activation:
+  sneak-right-click: true      # Main power on shift + right-click
+  sneak-left-click-special: true # Breeze / Echo secondary on shift + left-click AIR/BLOCK
+  # Commands /platt use 1 and /platt use 2 always work.
+  abilities-in-protected-worlds: true # Cosmetic/entity effects still require respect for server rules.
+charge:
+  count-pve-hits: true        # false = only PvP combat actions contribute
+  global-window-seconds: 12  # A streak expires after this many seconds between counted actions
+  reset-on-death: true
+  consume-on-unequip: false   # false = earned charge persists on disk even when changing armor
+  combat-hit-min-damage: 0.5
+trust:
+  cancel-friendly-fire: true
+  protect-from-abilities: true
+admin:
+  cooldown-reset-grants-ready: true
+smithing:
+  allow-retrim: true
+  # Recipe: I R I / R D R / I R I, I=iron ingot, R=redstone, D=diamond
+  template-item-model: 'platt:platt_template'
+particles:
+  count: 22
+
+# Each charge.type controls the REQUIRED combat action:
+# melee, sprint_melee, sneak_melee, airborne_melee, critical_melee,
+# rear_melee, ranged, defend (take a hit), shield_block (block with shield).
+# charge.hits consecutive actions within charge.window-seconds arm the power.
+materials:
+  lapis:
+    name: Enchantment Surge
+    charge: {type: melee, hits: 4, window-seconds: 12}
+    abilities:
+      '1': {cooldown: 60, duration: 7, damage-bonus: 1.5}
+  iron:
+    name: Iron Guard
+    charge: {type: shield_block, hits: 3, window-seconds: 18}
+    abilities:
+      '1': {cooldown: 40, duration: 4, frontal-reduction: 0.50}
+  redstone:
+    name: Piston Pulse
+    charge: {type: sprint_melee, hits: 3, window-seconds: 12}
+    abilities:
+      '1': {cooldown: 30, radius: 5, knockback: 1.7, self-launch: 1.1, power-redstone-components: false}
+  copper:
+    name: Lightning Rod
+    charge: {type: defend, hits: 3, window-seconds: 16}
+    abilities:
+      '1': {cooldown: 45, duration: 6, shock-damage: 3.0}
+  gold:
+    name: Golden Heart
+    charge: {type: defend, hits: 3, window-seconds: 18}
+    abilities:
+      '1': {cooldown: 120, absorption-seconds: 7, regeneration-seconds: 3}
+  emerald:
+    name: Village Guardian
+    charge: {type: melee, hits: 5, window-seconds: 12}
+    abilities:
+      '1': {cooldown: 100, duration: 12, trade-discount-seconds: 15}
+  diamond:
+    name: Diamond Edge
+    charge: {type: critical_melee, hits: 3, window-seconds: 16}
+    abilities:
+      '1': {cooldown: 55, duration: 8, sword-hits: 3, bonus-damage: 2.0}
+  netherite:
+    name: Unbreakable
+    charge: {type: defend, hits: 4, window-seconds: 18}
+    abilities:
+      '1': {cooldown: 80, duration: 6}
+  quartz:
+    name: Observer
+    charge: {type: ranged, hits: 2, window-seconds: 14}
+    abilities:
+      '1': {cooldown: 45, duration: 5, radius: 15}
+  amethyst:
+    name: Crystal Growth
+    charge: {type: critical_melee, hits: 2, window-seconds: 12}
+    abilities:
+      '1': {cooldown: 40, duration: 5, radius: 4}
+  resin:
+    name: Creaking Heart
+    charge: {type: rear_melee, hits: 2, window-seconds: 18}
+    abilities:
+      '1': {cooldown: 90, duration: 12}
+  breeze:
+    name: Stormbreaker
+    charge: {type: airborne_melee, hits: 2, window-seconds: 18}
+    abilities:
+      '1': {cooldown: 30, launch-power: 1.45, safe-fall-seconds: 15}
+      '2': {cooldown: 55, duration: 12, fall-damage-multiplier: 1.3, max-bonus-damage: 11.0}
+  echo:
+    name: Wardens Echo
+    charge: {type: sneak_melee, hits: 3, window-seconds: 14}
+    abilities:
+      '1': {cooldown: 55, range: 18, damage: 6.0, knockback: 0.8}
+      '2': {cooldown: 45, duration: 8, marks-required: 3, bonus-damage: 4.0}

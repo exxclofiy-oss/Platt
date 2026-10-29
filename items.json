@@ -1,0 +1,37 @@
+{
+  "replace": false,
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:trims/items/helmet_trim_breeze"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:trims/items/chestplate_trim_breeze"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:trims/items/leggings_trim_breeze"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:trims/items/boots_trim_breeze"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:trims/items/helmet_trim_echo"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:trims/items/chestplate_trim_echo"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:trims/items/leggings_trim_echo"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "minecraft:trims/items/boots_trim_echo"
+    }
+  ]
+}

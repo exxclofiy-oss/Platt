@@ -1,0 +1,109 @@
+{
+  "replace": false,
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_lapis"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_lapis"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_iron"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_iron"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_redstone"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_redstone"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_copper"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_copper"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_gold"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_gold"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_emerald"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_emerald"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_diamond"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_diamond"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_netherite"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_netherite"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_quartz"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_quartz"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_amethyst"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_amethyst"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_resin"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_resin"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_breeze"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_breeze"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid/platt_echo"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "platt:trims/entity/humanoid_leggings/platt_echo"
+    }
+  ]
+}
